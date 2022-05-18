@@ -12,6 +12,7 @@
     <ReactNativeProjectType>App-WinAppSDK</ReactNativeProjectType>
     <PublishProfile>Properties\PublishProfiles\win10-$(Platform).pubxml</PublishProfile>
     <UseWinUI>true</UseWinUI>
+    <WindowsPackageType>None</WindowsPackageType>
     <EnablePreviewMsixTooling>true</EnablePreviewMsixTooling>
   </PropertyGroup>
     <ItemGroup>
@@ -37,7 +38,7 @@
       <Version>0.0.0-canary.501</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.WindowsAppSDK">
-      <Version>1.0.0</Version>
+      <Version>1.0.3</Version>
     </PackageReference>
     <Manifest Include="$(ApplicationManifest)" />
   </ItemGroup>
@@ -45,6 +46,6 @@
        Tools extension to be activated for this project even if the Windows App SDK Nuget
        package has not yet been restored -->
   <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnablePreviewMsixTooling)'=='true'">
-    <ProjectCapability Include="Msix"/>
+    <ProjectCapability Include="Msix" />
   </ItemGroup>
 </Project>
